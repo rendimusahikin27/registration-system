@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pendaftaran Peserta — Workshop Web Development</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <span class="topbar-mark">Form Pendaftaran</span>
+        <span class="topbar-slot">Kuota terbatas — 40 Peserta</span>
+      </header>
+
+      <main class="card">
+        <p class="eyebrow">Workshop — Kamis, 16 Julo 2026</p>
+        <h1>Daftar Workshop Web Development untuk Pemula</h1>
+        <p class="lede">
+          Isi data di bawah ini untuk mengamankan kursi. Konfirmasi dikirim
+          lewat WhatsApp maksimal 1x24 jam.
+        </p>
+
+        <form id="daftarForm" class="form" novalidate>
+          <div class="form-row">
+            <label for="nama">Nama Lengkap</label>
+            <input
+              type="text"
+              id="nama"
+              name="nama"
+              required
+              autocomplete="name"
+            />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              autocomplete="email"
+            />
+          </div>
+          <div class="form-row">
+            <label for="whatsapp">No. WhatsApp</label>
+            <input
+              type="tel"
+              id="whatsapp"
+              name="whatsapp"
+              required
+              autocomplete="tel"
+            />
+          </div>
+          <div class="form-row">
+            <label for="acara">Acara yang Diikuti</label>
+            <select name="acara" id="acara">
+              <option value="">Pilih acara</option>
+              <option value="Workshop Web Development">
+                Workshop Web Development
+              </option>
+              <option value="Workshop Desain UI/UX">
+                Workshop Desain UI/UX
+              </option>
+              <option value="Workshop Desain UI/UX">
+                Workshop Desain UI/UX
+              </option>
+              <option value="Workshop Digital Marketing">
+                Workshop Digital Marketing
+              </option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="catatan">Catatan (opsional)</label>
+            <textarea
+              name="catatan"
+              id="catatan"
+              rows="3"
+              placeholder="Pertanyaan atau kebutuhan khusus"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            <span class="btn-text">Daftar Sekarang</span>
+          </button>
+          <p
+            class="form-status"
+            id="formStatus"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </main>
+
+      <footer class="footnote">
+        Sudah daftar sebelumnya? <a href="admin/login.php">Panel admin</a> untuk
+        melihat daftar peserta.
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

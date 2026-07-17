@@ -1,0 +1,275 @@
+:root {
+  --bg: #faf7f2;
+  --card: #ffffff;
+  --ink: #1b2430;
+  --ink-soft: rgba(27, 36, 48, 0.65);
+  --teal: #2f6f63;
+  --gold: #c98a2c;
+  --line: rgba(27, 36, 48, 0.12);
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.55;
+}
+
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 1.25rem 4rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 0;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+}
+
+.topbar-mark {
+  font-weight: 600;
+}
+
+.topbar-slot {
+  color: var(--teal);
+  font-weight: 500;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 2.4rem 2rem 2.6rem;
+  box-shadow: 0 20px 50px -30px rgba(27, 36, 48, 0.25);
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin: 0 0 0.8rem;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+  margin: 0 0 0.9rem;
+  line-height: 1.25;
+}
+
+.lede {
+  color: var(--ink-soft);
+  margin: 0 0 2rem;
+  font-size: 0.98rem;
+}
+
+.form-row {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.form-row label {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: 2px solid var(--teal);
+  outline-offset: 1px;
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: 0.6rem;
+  background: var(--teal);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.9rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-submit:hover {
+  background: #285a50;
+}
+
+.btn-submit[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-status {
+  margin-top: 1rem;
+  font-size: 0.88rem;
+  min-height: 1.2em;
+}
+
+.form-status.ok {
+  color: var(--teal);
+}
+
+.form-status.err {
+  color: #a13b2b;
+}
+
+.footnote {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.footnote a {
+  color: var(--teal);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.admin-wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+.admin-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.admin-head h1 {
+  margin: 0;
+}
+
+.admin-logout {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  padding: 0.55rem 1rem;
+  border-radius: 6px;
+  background: var(--card);
+}
+
+.admin-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.1rem 1.4rem;
+  min-width: 160px;
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--teal);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.table-wrap {
+  background: var(--card);
+  border: 1px solid --line;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid --line;
+  white-space: nowrap;
+}
+
+th {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  colro: var(--ink-soft);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.login-wrap {
+  max-width: 380px;
+  margin: 4.5rem auto;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 2.2rem 1.8rem;
+}
+
+.login-wrap h1 {
+  font-size: 1.3rem;
+}
+
+.login-error {
+  color: #a13b2b;
+  font-size: 0.88rem;
+  margin: 0 0 1rem;
+}
+
+@media (max-width: 560px) {
+  .card {
+    padding: 1.8rem 1.3rem;
+  }
+}
